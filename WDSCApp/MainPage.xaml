@@ -9,6 +9,30 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="100" Height="100" Margin="10"/>
+            <TextBlock x:Name="DelayText" Text="500ms" Margin="10" TextAlignment="Center" FontSize="26.667" />
+            <TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Margin="10,50,10,10" TextAlignment="Center" FontSize="26.667" />
+        </StackPanel>
+        <TextBlock x:Name="DeviceBlock" Text="Device" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="70" />
+        <TextBox x:Name="DeviceBox" 
+                 HorizontalAlignment="Left" 
+                 Margin="80,10,0,0" 
+                 Text="No connection" 
+                 VerticalAlignment="Top" 
+                 Width="180"
+                 IsReadOnly="True"
+                 BorderThickness="0"
+                 />
+        <TextBox x:Name="MessageBox" 
+                 HorizontalAlignment="Left" 
+                 Margin="83,61,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="No message received" 
+                 VerticalAlignment="Top" 
+                 Width="330"
+                 IsReadOnly="True"
+                 BorderThickness="0"/>
 
     </Grid>
 </Page>
